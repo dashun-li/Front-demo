@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 100px;
+				height: 100px;
+				background: #FF6600;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).mousemove(function(event){
+				console.log(event.pageX,event.pageY);
+				$("#box").css({"left":event.pageX-50,"top":event.pageY-50});//要使图像走，必须先定位
+				
+			});
+		</script>
+	</body>
+</html>

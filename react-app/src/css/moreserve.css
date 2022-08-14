@@ -1,0 +1,23 @@
+@import './common.css';
+/* 上方内容栏 */
+#mserve{
+    height: 1px;
+    flex-grow: 1;
+}
+  #mserve #main {
+    background: #fff;
+    height: 1px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+#main .list{
+    margin: 0
+}
+#main .list .item img{
+    width: 40px;
+}
+/* 底部工具栏 */
+.tabbar{
+    background: #fff ;
+}

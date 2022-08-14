@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:100;
+				padding: 100;
+			}
+			
+		</style>
+	</head>
+	<body>
+
+	<script>
+		function createTab(row,col){
+			var htmlStr = "<table id='myTab' border='1'>";
+			for(var i=0;i<row;i++){
+				htmlStr +="<tr>"
+				for(var j=0;j<col;j++){
+					htmlStr+="<td>"+j+"</td>"
+				}
+				htmlStr+="</tr>";
+			}
+			document.write(htmlStr+"</table>");
+		}
+		
+		createTab(4,3);//调用 三行两列
+		document.write("<p>serw</p><hr/>")
+
+	</script>
+
+
+
+
+
+
+
+	</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>任务清单</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        header h1 {
+            text-align: center;
+            background: #00DFDF;
+            margin: 0;
+            height: 50px;
+            color: white
+        }
+
+        nav {
+            background: #eee
+        }
+
+        ul {
+            width: 260px;
+            margin: 0 auto;
+        }
+
+        ul>li {
+            width: 100px;
+            text-align: center;
+            float: left;
+            margin: 0 15px;
+            font-size: 20px;
+            height: 50px;
+        }
+
+        ul>li.active a {
+            background: white;
+            color: #4BE6ED;
+        }
+
+        ul>li a {
+            display: block;
+            color: white;
+            background: #4BE6ED;
+            height: 30px;
+            border-radius: 10px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        #addlist article {
+            border-bottom: 2px dashed #cccccc;
+            height: 50px
+        }
+
+        #addlist div {
+            float: left
+        }
+
+        #addlist div.rightbox {
+            float: right
+        }
+
+        #addlist div.centerbox {
+            margin-top: 5px;
+            padding-left: 5px
+        }
+
+        #addlist div.centerbox h5 {
+            margin: 0
+        }
+
+        #addlist div.centerbox time {
+            font-size: 10px;
+            color: #cccccc
+        }
+
+        .leftbox,
+        .rightbox {
+            margin-top: 10px;
+        }
+
+        .rightbox button,
+        #addtask form #btn {
+            border: none;
+            background: #95CFF2;
+            color: white;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-right: 10px
+        }
+        /* 第二页 */
+
+        #addtask {
+            display: none;
+        }
+
+        #addtask form {
+            font-weight: bold;
+        }
+
+        #addtask form textarea {
+            margin: 8px 0;
+        }
+
+        #addtask form #btn {
+            margin-top: 10px
+        }
+    </style>
+    <script src="./jquery.min.js"></script>
+    <script src="./template.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>任务清单</h1>
+    </header>
+    <nav>
+        <ul>
+            <li class="active" data-view="#addlist">
+                <a href="#">任务列表</a>
+            </li>
+            <li data-view="#addtask">
+                <a href="#">添加任务</a>
+            </li>
+            <div style="clear:both"></div>
+        </ul>
+    </nav>
+    <!-- 任务列表 -->
+    <section id="addlist">
+    </section>
+    <!-- 渲染页面 -->
+    <script type="text/html" id="cons">
+        <article>
+            <div class="leftbox">
+                <input type="checkbox">
+            </div>
+            <div class="centerbox">
+                <h5>{{content}}</h5>
+                <time>{{time}}</time>
+            </div>
+            <div class="rightbox">
+                <button>删除</button>
+            </div>
+        </article>
+    </script>
+    <!-- 渲染页面 //  -->
+    <!-- 添加任务页面 -->
+    <section id="addtask">
+        <form>
+            <label for="content">内容
+                <textarea name="content" id="content" style="width:100%;height:50px"></textarea>
+            </label>
+            日期
+            <input type="date" name="time" value="">
+            <br/>
+            <input type="button" name="" value="提交" id="btn">
+        </form>
+    </section>
+
+    <script type="text/javascript">
+        //tab切换 点击a
+        $("li>a").on("click", function () {
+            var obj = $(this).parent();
+            //切换li 的样式
+            obj.addClass("active").siblings().removeClass("active");
+            var id = "";
+            //获取li的自定义属性值,找到相应的section
+            $(id += obj.data("view")).show().siblings("section").hide()
+        });
+                var arr = [];
+        //在第二页的时候.定义数组,收集填写的内容
+        $("#btn").on("click", function () {
+            
+                var obj = {};
+                //将填写的内容保存在对象中,
+                obj.content = $("#content").val();
+                obj.time = $("input[name='time']").val();
+                arr.push(obj);
+                localStorage.setItem("data", JSON.stringify(arr));
+                location.reload(true);
+        });
+  
+        //第一页获取第二页的数据,将字符串转换为数组对象
+            var datas = JSON.parse(localStorage.getItem("data"));
+        //当本地储存有内容的时候,将内容赋给数组arr
+        if(datas){
+            arr = datas
+        };
+        //遍历获取到的数组对象,渲染到页面
+        for (var i in datas) {
+            var list = datas[i];
+            var html = template("cons", list);
+            $("#addlist").append(html);
+        }
+    </script>
+
+
+</body>
+
+</html>

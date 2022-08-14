@@ -1,0 +1,25 @@
+
+#service {height: 1rem;flex-grow: 1;background: #fff;}
+#service .main-content{overflow: scroll}
+#service .main-content .content-list{text-align: center}
+#service .main-content .content-list img{width:60%;display: block;margin:0 auto;}
+#service .main-content .content-list a{color:#777;}
+#service .main-content .content-list .col{
+  border-right:1px solid #eee;border-bottom:1px solid #eee;padding:1rem 0.8rem;}
+#service .main-content .group-body{padding:0;}
+#service .main-content header{font-size:1.1rem; font-weight:bold;}
+
+
+/*更多服务页的样式*/
+#more .more-mainbox{height: 1rem;flex-grow: 1;background: #fff;overflow: scroll;padding-left: 0.5rem;}
+#more .more-mainbox ul.list{margin-top:0;}
+#more .more-mainbox ul.list li.item-linked>a{padding-left:0;}
+#more .more-mainbox .item-media{width:10%}
+#more .more-mainbox img{width:100%}
+
+/*政府公告页样式*/
+#notice .notice-mainbox{height: 1rem;flex-grow: 1;overflow: scroll;background: #fff;padding-left: 0.5rem;}
+#notice .notice-mainbox ul.list{margin-top:0;}
+#notice .notice-mainbox ul.list li {padding-left:0;}
+#notice .notice-mainbox .item-media{width:20%}
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				/*border-radius: 50px;*/
+				position: absolute;
+				left: 0;
+				right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var a = false;
+			var m,n;
+			$("#box").mousedown(function(event){
+				a = true;
+				var x = $(this).offset().left;
+				var y = $(this).offset().top;
+				var xx = event.pageX;
+				var yy = event.pageY;
+				m = xx - x;
+				n = yy - y;
+				//console.log(x,y,xx,yy);
+			});
+			$("#box").mouseup(function(){
+				a = false;
+			});
+			$(document).mousemove(function(event){
+				if(a){
+					var x = event.pageX;
+					var y = event.pageY;
+					$("#box").css({"left":x-m,"top":y-n});
+				}
+			});
+			
+		</script>
+	</body>
+</html>

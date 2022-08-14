@@ -1,0 +1,9 @@
+#add .add-mainbox{height: 1rem;flex-grow: 1;overflow: scroll;}
+#add .add-mainbox .field-group{height: 3.5rem;margin-top:0.8rem;border-top:1px solid #eee;}
+#add .add-mainbox .field-group-label{background: #fff;border:none;color:#18B4ED;font-size:0.3rem;}
+#add .add-mainbox .field{border:none;}
+#add .add-mainbox ul.list{position: relative;margin-top:1rem;margin-bottom: 0;}
+#add .add-mainbox ul.list .item-title{font-size:1rem;color:#666;}
+#add .add-mainbox ul.list .item-icon{position: absolute;right: 0.8rem;top:1.6rem;}
+#add .add-mainbox .item-media{width:10%}
+#add .add-mainbox ul.list .item-subtitle{color:#aaa;}

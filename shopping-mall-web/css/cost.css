@@ -1,0 +1,240 @@
+
+/*costbox title*/
+.title{
+	font-size: 18px;
+	color: #666666;
+}
+.title>p{
+	padding: 24px 0 6px 3px;
+}
+.title a{
+	color: #666666;
+}
+.title .last{
+	color: #1080e9;
+	text-decoration: underline;
+}
+.title  .hastext1{
+	height: 60px;
+	background: #F2F2F2;
+	line-height: 60px;
+	text-indent: 5px;
+}
+.title  .hastext1 span{
+	color: #f30e0e;
+}
+.title  .hastext1 .fr{
+	margin-right: 91px;
+}
+.mainbox .titlebox{
+	font-size: 18px;
+	color: #bfbfbf;
+	margin: 10px 0;
+}
+.mainbox .titlebox img{
+	font-size: 18px;
+	color: #bfbfbf;
+	margin-right: 10px;
+}
+.mainbox .hascontent{
+	background: #F2F2F2;
+	height: 94px;
+	font-size: 18px;
+}
+.mainbox .hascontent p{
+	margin-left: 64px;
+	padding-top: 28px;
+}
+.mainbox .hascontent p span.first{
+	display: inline-block;
+	width: 123px;
+	height: 32px;
+	border: 1px solid #BFBFBF;
+	text-align: center;
+	line-height: 34px;
+	cursor: pointer;
+}
+.mainbox .hascontent p span.current{
+	border: 2px solid #FF6600;
+	width: 121px;
+	height: 30px;
+	background: url(../img/07-_结算（付款）成功、失败-恢复的_03_03.png) no-repeat 108px 18px;
+}
+.mainbox .hascontent p span.second{
+	display: inline-block;
+	width: 346px;
+	height: 32px;
+	border: 1px solid #BFBFBF;
+	text-align: center;
+	line-height: 34px;
+}
+.mainbox .hascontent p span.second .one{
+	margin-left: 20px;
+}
+.mainbox .hascontent p span.second .two{
+	margin-left: 56px;
+	color: #FF6600;
+}
+.mainbox .hascontent p span.second .three{
+	color: #bfbfbf;
+}
+.mainbox .hascontent button.first{
+	border: none;
+	color: white;
+	background: #999999;
+	width: 120px;
+	height: 30px;
+	outline: none;
+}
+.mainbox .hascontent p span.last{
+	line-height: 34px;
+	margin-right: 23px;
+}
+.mainbox .hascontent p span.last span {
+	color: #FF6600;
+}
+.mainbox>button{
+	display: block;
+	width: 228px;
+	height: 60px;
+	outline: none;
+	border: none;
+	background: #FF6600;
+	color: white;
+	font-size: 26px;
+	margin-top: 12px;
+	cursor: pointer;
+}
+.mainbox div.one{
+	margin-top: 39px;
+}
+.mainbox .hascontent p.last{
+	line-height: 42px;
+	color: #595959;
+}
+.mainbox .hascontent p.last a{
+	margin: 0 14px;
+	color: #595959;
+}
+
+/*支付成功界面*/
+.whole{
+	font-size: 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.2);
+	display: none;
+}
+.whole .true{
+	height: 276px;
+	width: 470px;
+	background: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -138px;
+	margin-left: -235px;
+}
+.whole .true .titles{
+	height: 41px;
+	width: 470px;
+	background: #E6E6E6;
+	line-height: 41px;
+	position: relative;
+}
+.whole .true .titles span{
+	margin-left: 13px;
+	color: #666666;
+}
+.whole .true .titles img{
+	position: absolute;
+	right: 17px;
+	top: 12px;
+}
+.whole .true .contents {
+	width: 187px;
+	height: 180px;
+	margin: 25px auto 0;
+}
+.whole .true .contents span{
+	margin-left: 5px;
+}
+.whole .true .contents p{
+	text-align: center;
+	color: #E8E8E8;
+	margin-top: 16px;
+}
+.whole .true .contents .comfirm{
+	width: 120px;
+	height: 40px;
+	color: white;
+	background: #FF6600;
+	text-align: center;
+	margin-top: 30px;
+	line-height: 40px;
+	margin-left: 34px;
+}
+/*支付失败界面*/
+.whole1{
+	font-size: 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.2);
+	display: none;
+}
+.whole1 .false{
+	height: 276px;
+	width: 470px;
+	background: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -138px;
+	margin-left: -235px;
+}
+.whole1 .false .titles{
+	height: 41px;
+	width: 470px;
+	background: #E6E6E6;
+	line-height: 41px;
+	position: relative;
+}
+.whole1 .false .titles span{
+	margin-left: 13px;
+	color: #666666;
+}
+.whole1 .false .titles img{
+	position: absolute;
+	right: 17px;
+	top: 12px;
+}
+.whole1 .false .contents {
+	width: 187px;
+	height: 180px;
+	margin: 25px auto 0;
+}
+.whole1 .false .contents span{
+	margin-left: 5px;
+}
+.whole1 .false .contents p{
+	text-align: center;
+	color: #E8E8E8;
+	margin-top: 16px;
+}
+.whole1 .false .contents .comfirm{
+	width: 120px;
+	height: 40px;
+	color: white;
+	background: #FF6600;
+	text-align: center;
+	margin-top: 30px;
+	line-height: 40px;
+	margin-left: 34px;
+}
+

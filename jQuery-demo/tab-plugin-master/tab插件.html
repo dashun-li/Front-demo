@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html{
+				margin:100px;
+			}
+			ul{
+				list-style: none;
+				text-align: center;
+				height: 100px;
+				background:#F5F5F5;
+			}
+			ul li{
+				float: left;
+				width: 400px;
+				height: 100px;
+				line-height: 100px;
+			}
+			ul li.current{
+				background: lightblue;
+				color: white;
+			}
+			.mainbox div{
+				width: 800px;
+				height:200px;
+				background:lightblue;
+				display: none;
+				font-size: 5em;
+				color: gainsboro;
+				text-align: center;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		
+		<div class="mainbox">
+			<ul class="titlebox">
+				<li class="current">1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+			<div style="display: block;">1</div>
+			<div>2</div>
+			<div >3</div>
+		</div>
+		</div>
+
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jQuery.tabChange.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".mainbox").tabChange({
+					box_w:600,//最外层盒子的宽度
+					box_h:300,//最外层容器的高度
+					title_h:40,//标题高度
+					liw:200
+			});
+			
+		</script>
+		
+		
+	</body>
+</html>

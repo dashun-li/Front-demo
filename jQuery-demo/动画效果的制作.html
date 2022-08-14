@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 100px;
+				height: 100px;
+				background: #FF6600;
+			}
+			#box1{
+				width: 100px;
+				height: 100px;
+				background: #FF6600;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="box"></div>
+	<input type="button" name="show" id="show" value="显示" />
+		<input type="button" name="hidden" id="hidden" value="隐藏" />
+		<input type="button" name="change" id="change" value="切换" />
+		<input type="button" name="in" id="in" value="淡入" />
+		<input type="button" name="out" id="out" value="淡出" />
+		<input type="button" name="to" id="to" value="fadeto" />
+		<input type="button" name="open" id="open" value="展开" />
+		<input type="button" name="close" id="close" value="折叠" />
+		<input type="button" name="change" id="change1" value="切换1" />
+		<div id="box1"></div>
+		
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		
+			
+		//显示与隐藏
+			$("#show").click(function(){
+				$("#box").show(1000)
+			});
+			$("#hidden").click(function(){
+				$("#box").hide(1000)
+			});
+			$("#change").click(function(){
+				$("#box").toggle(1000)
+			});
+			//淡入淡出
+			$("#in").click(function(){
+				$("#box").fadeIn(2000)
+			});
+			$("#out").click(function(){
+				$("#box").fadeOut(2000)
+			});
+			$("#to").click(function(){
+				$("#box").fadeTo(2000,0.5)
+			});
+			//滑动函数
+			$("#open").click(function(){
+				$("#box").slideDown(1000)
+			});
+			$("#close").click(function(){
+				$("#box").slideUp(1000)
+			});
+			$("#change1").click(function(){
+				$("#box").slideToggle(2000)
+			});
+			//自定义动画
+				function aa(){
+					
+					$("#box1").animate({"left":500,"border-radius":50,"width":100,"top":300},3000)
+					.animate({"left":0,"border-radius":0,"width":100,"top":120},3000,function(){
+						aa();
+					})
+		
+				}
+				aa();
+		
+		
+			
+		</script>
+	</body>
+</html>

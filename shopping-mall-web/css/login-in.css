@@ -1,0 +1,123 @@
+#mainbox{
+	background:#E93B55 ;	
+	height: 500px;
+	position: relative;
+}
+#mainbox .haspic img{
+	height: 500px;
+}
+#mainbox #loginbox{
+	height: 370px;
+	width: 350px;
+	background: white;
+	position: absolute;
+	right: 100px;
+	top: 65px;
+}
+#mainbox #loginbox .title{
+	line-height: 56px;
+	height: 55px;
+	border-bottom: 1px solid #F6F6F6;
+}
+#mainbox #loginbox .title li.current{
+	color: #FF6600;
+}
+#mainbox #loginbox .title li{
+	text-align: center;
+	float: left;
+	width: 174px;
+	font-size: 22px;
+	color: #666666;
+}
+
+#mainbox #loginbox .title li span{
+	width: 174px;
+	padding-left: 44px;
+	padding-right: 41px;
+	border-right: 1px solid #F6F6F6;
+}
+#mainbox #loginbox .login{
+	height: 314px;
+}
+#mainbox #loginbox div.last{
+	text-align: center;
+	line-height: 56px;
+	height: 55px;
+	border-top: 2px solid #F6F6F6;
+	font-size: 20px;
+	color: #FF6600;
+	background: #FCFCFC;
+	width: 350px;
+}
+#mainbox #loginbox form{
+	margin-top: 42px;
+	padding-left: 30px;
+	width: 290px;
+}
+#mainbox #loginbox form .input-box{
+	border: 1px solid #BFBFBF;
+	width: 288px;
+	height: 38px;
+	font-size: 16px;
+	
+}
+#mainbox #loginbox form .check{
+	margin-right: 3px;
+}
+#mainbox #loginbox form .userbox{
+	position: relative;
+}
+#mainbox #loginbox form .userbox img{ 
+	display: none;
+	position: absolute;
+	top: 12px;
+	right: 12px;
+}
+#mainbox #loginbox form input.first{
+	margin-bottom: 17px;
+	color:#e5e5e5;
+	text-indent: 42px;
+	background: url(../img/登录-恢复的_03.png) no-repeat;
+}
+#mainbox #loginbox form .second{
+	text-indent: 42px;
+	background: url(../img/登录-恢复的_10.png) no-repeat;
+}
+.second::-webkit-input-placeholder{
+                color: #e5e5e5;
+            }
+#mainbox #loginbox form input.last{
+	background: #ff6600;
+	border: 0;
+	width: 290px;
+	height: 40px;
+	color: white;
+	font-size: 24px;
+	letter-spacing: 26px;
+	margin: 28px 0;
+	text-indent: 20px;
+}
+#mainbox #loginbox div.last a span{
+	color: #FF6600;
+	font-size: 20px;
+	margin-left: 5px;
+}
+/*扫码登录*/
+
+#mainbox #loginbox .login p{
+	text-align: center;
+	color: #666666;
+	margin-top: 32px;
+}
+#mainbox #loginbox div.first{
+	position: absolute;
+	top: 40px;
+	left: 0;
+}
+#mainbox #loginbox .login .haspic1{
+	width: 185px;
+	height: 170px;
+	text-align: center;
+	overflow: hidden;
+	margin: 55px auto 0;
+} 

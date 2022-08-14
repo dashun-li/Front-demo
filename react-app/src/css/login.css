@@ -1,0 +1,66 @@
+html,body,#app,h1,p{margin:0;padding: 0;}
+html,body,#app{height:100% }
+@import "common.css";
+#login {
+  height:100%;
+  padding-top:2rem ;
+  background: #18B4ED;
+}
+/*头部样式开始*/
+#login header {
+  width:50%;
+  margin:0 auto;
+  text-align: center;
+}
+#login header img {
+  width:100%;
+}
+#login header h1 {
+  color: #fff;
+  font-weight:normal;
+  font-size:32px;
+}
+/*头部样式结束*/
+/*表单样式开始*/
+#login form {
+  width:90%;
+  margin:0 auto;
+}
+#login form p {
+  color: #fff;
+  width:90%;
+  margin:0.5rem auto;
+}
+#login form p input[type='text'],
+#login form p input[type='password'],
+#login form p input[type='button']{
+  border:1px solid #fff;
+  border-radius: 8px;
+}
+#login form p input[type='text'],
+#login form p input[type='password']{
+  text-indent:2rem;
+}
+#login form p input{
+  box-sizing: border-box;
+  height:2.3rem;
+  border:none;
+  background: transparent;
+  width:100%;
+  color: #fff;
+  outline: none;
+  font-size:1.1rem;
+}
+#login form p.last_p {
+  text-align: center;
+  margin-top:1rem;
+}
+#login form p.last_p a{
+  color: #fff;
+  font-size:0.9rem;
+  text-decoration: none;
+  border:1px solid #fff;
+  padding:0.1rem 0.2rem;
+  border-radius: 8px;
+}
+/*表单样式结束*/

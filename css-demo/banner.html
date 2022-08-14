@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>多背景设置-banner优化</title>
+    <style type="text/css">
+    div{
+        margin-bottom: 10px;
+    }
+        .banner {
+            height: 292px;
+            background-image: url(bg2.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .banner2 {
+            height: 292px;
+            background-image: url(bg.png), url(bg_line.jpg);
+            background-repeat: no-repeat, repeat-y;
+            background-position: center;
+        }
+
+        .banner3 {
+            height: 292px;
+            background-image: url(bg.png), -webkit-linear-gradient(left, #ff9eaf, #72b8fe);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner"></div>
+
+
+    <!--优化方案1-->
+    <div class="banner2"></div>
+
+    <!--优化方案2-->
+    <div class="banner3"></div>
+</body>
+
+</html>

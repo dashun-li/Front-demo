@@ -1,0 +1,30 @@
+#head{
+	background:#0F0F0F ;
+	height: 21px;
+}
+#head .content{
+	line-height: 21px;
+	position: relative;
+}
+#head .content .indexweb{
+	position: absolute;
+	left: 264px;
+	top: 0;
+}
+/*headnav*/
+#headnav{
+	height: 84px;
+	position: relative;
+}
+#headnav>a{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+#headnav>span{
+	font-size: 28px;
+	color: #666666;
+	position: absolute;
+	left: 282px;
+	top: 21px;
+}

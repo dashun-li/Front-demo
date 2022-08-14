@@ -1,0 +1,13 @@
+/*社交页顶部样式*/
+#gam .gam-head{color:#eee;}
+#gam .ico-plus{position: fixed;right:0.5rem;top:0.8rem;color: #fff;}
+#gam .gam-main .ico1{color: #000;}
+#gam .gam-main .gam-msg{background: #fff;padding-top:0.1rem;height: 3.8rem;}
+#gam .gam-main .item-media{width:10%}
+#gam .gam-main .gam-new{margin-top:0.5rem;}
+#gam .gam-main .gam-new img{width: 100%}
+
+/*动态页*/
+#gam .gm-dt{background: #fff;height: 1rem;flex-grow: 1;padding:0.5rem 0 0 0.5rem;}
+#gam .gm-dt .gm-dt-list .img1{width:15%;float: left}
+#gam .gm-dt .gm-dt-list .content{width:75%;float: left;margin-left: 1rem;}

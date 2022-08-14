@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul,
+			dl {
+				list-style: none;
+			}
+			
+			a {
+				color: black;
+				text-decoration: none;
+			}
+			
+			#left_nav {
+				width: 240px;
+				position: absolute;
+				left: 20px;
+				top: 50px;
+				background: #EEEEEE;
+				padding: 10px 0;
+			}
+			
+			#left_nav .main_list li p {
+				height: 36px;
+				line-height: 36px;
+				text-align: left;
+				text-indent: 10px;
+				position: relative;
+				z-index: 100;
+			}
+			
+			#left_nav .main_list li p>a {
+				padding: 0 10px;
+				border-right: 1px solid black;
+			}
+			
+			#left_nav .main_list li.current p{
+				border: 1px solid red;
+				border-right: 1px;
+				background: white;
+				color: red;
+			}
+			#left_nav .main_list li.current .child_list{
+				display: block;
+				border: 1px solid red;
+			}
+			#left_nav .child_list {
+				position: absolute;
+				left: 239px;
+				top: 0px;
+				background: white;
+				width: 834px;
+				display: none;
+				font-size: 14px;
+			}
+			
+			#left_nav .child_list a {
+				display: inline-block;
+				color: black;
+				width: 80px;
+				margin-left: 20px;
+				height: 30px;
+				line-height: 30px;
+			}
+			#left_nav .child_list .content {
+				border-bottom: 2px solid #eee;
+				padding-bottom: 20px;
+			}
+		</style>
+	</head>
+	<div id="left_nav">
+		<ul class="main_list ">
+			<li>
+				<p >
+					<a href="">游戏</a>
+					<a href="">手办</a>
+					<a href="">鼠键</a>
+				</p>
+				<div class="child_list">
+					<div class="content">
+						<div>
+							<a href="">网游1</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+					<div class="content">
+						<div>
+							<a href="">网游</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+					<div class="content">
+						<div>
+							<a href="">网游</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+					<div class="content">
+						<div>
+							<a href="">网游</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul class="main_list">
+			<li>
+				<p>
+					<a href="">游戏</a>
+					<a href="">手办</a>
+					<a href="">鼠键</a>
+				</p>
+				<div class="child_list">
+					<div class="content">
+						<div>
+							<a href="">网游2</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+					<div class="content">
+						<div>
+							<a href="">网游</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+					<div class="content">
+						<div>
+							<a href="">网游</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+					<div class="content">
+						<div>
+							<a href="">网游</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+				</div>
+			</li>
+			<li>
+				<p>
+					<a href="">游戏</a>
+					<a href="">手办</a>
+					<a href="">鼠键</a>
+				</p>
+				<div class="child_list">
+					<div class="content">
+						<div>
+							<a href="">网游3</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+					<div class="content">
+						<div>
+							<a href="">网游</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+					<div class="content">
+						<div>
+							<a href="">网游</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+					<div class="content">
+						<div>
+							<a href="">网游</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+				</div>
+			</li>
+			<li>
+				<p>
+					<a href="">游戏</a>
+					<a href="">手办</a>
+					<a href="">鼠键</a>
+				</p>
+				<div class="child_list">
+					<div class="content">
+						<div>
+							<a href="">网游4</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+					<div class="content">
+						<div>
+							<a href="">网游</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+					<div class="content">
+						<div>
+							<a href="">网游</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+					<div class="content">
+						<div>
+							<a href="">网游</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+				</div>
+			</li>
+			<li>
+				<p>
+					<a href="">游戏</a>
+					<a href="">手办</a>
+					<a href="">鼠键</a>
+				</p>
+				<div class="child_list">
+					<div class="content">
+						<div>
+							<a href="">网游5</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+					<div class="content">
+						<div>
+							<a href="">网游</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+					<div class="content">
+						<div>
+							<a href="">网游</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+					<div class="content">
+						<div>
+							<a href="">网游</a>
+						</div>
+						<a href="">网游1</a>
+						<a href="">网游2</a>
+						<a href="">网游3</a>
+						<a href="">网游4</a>
+						<a href="">网游5</a>
+						<a href="">网游6</a>
+						<a href="">网游7</a>
+						<a href="">网游8</a>
+						<a href="">网游9</a>
+						<a href="">网游10</a>
+						<a href="">网游11</a>
+						<a href="">网游12</a>
+						<a href="">网游13</a>
+						<a href="">网游14</a>
+						<a href="">网游15</a>
+						<a href="">网游16</a>
+						<a href="">网游17</a>
+						<a href="">网游18</a>
+						<a href="">网游19</a>
+						<a href="">网游20</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<body>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("#left_nav .main_list li").hover(function(){
+				$(this).addClass("current")
+			},function(){
+				$(this).removeClass("current")
+			});
+			
+			
+		</script>
+
+	</body>
+
+</html>

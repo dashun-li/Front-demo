@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				height: 6000px;
+			}
+			#online{
+				width: 72px;
+				position: fixed;
+				top: 200px;
+				right: 10px;
+			}
+			#online ul{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				background: #868686;
+			}
+			#online ul #returnTop{
+				display: none;
+			}
+		</style>
+		<script src="script/fn.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="online">
+			<ul>
+				<li><img src="img/r_phone.png"/></li>
+				<li><img src="img/r_qq.png"/></li>
+				<li><img src="img/r_wx.png"/></li>
+				<li id="returnTop"><img src="img/r_top.png"/></li>
+			</ul>
+		</div>
+	<script type="text/javascript">
+		//效果：当滚轮滑动到一定高度就直接显示返回顶部按钮，2.当点击返回顶部时就返回顶部，另scoll的top值为0
+		//获取对象和滚轮top值
+		
+	//滚轮滑动时，top的显示与隐藏
+		window.onscroll=function(){
+			var returnTop = getId("returnTop");
+			var topx = document.documentElement.scrollTop || document.body.scrollTop;
+			if(topx >= 1000){
+				returnTop.style.display="block";
+			}else{
+				returnTop.style.display="none";
+			} 
+		};
+	//点击top时，缓慢返回顶部
+
+		returnTop.onclick=function(){
+		
+		var returnTop = getId("returnTop");
+		
+		var moveId = setInterval(function(){
+			
+			//topx需要在时间周期里变化，
+			var topx = document.documentElement.scrollTop || document.body.scrollTop;//做兼容
+			topx-=500;
+			//在或语句中要分开赋值。
+			document.documentElement.scrollTop =topx;
+			document.body.scrollTop=topx;
+			
+			if(topx <= 0){//有些时候减下去不一定得到0，很有可能是负，所以用topx<=0
+				clearInterval(moveId);//id值不要引号
+			}
+		},100);
+		}
+		
+		
+			
+		
+		
+		
+/*		function createFunctions(){
+				 
+				 var result = new Array();
+				 
+				 for (var i=0; i < 10; i++){
+				   
+				   result[i] = function(){
+				      return i;
+				    };
+				    
+				  }
+				  return result;
+				}
+				
+				var funcs = createFunctions();
+				
+				for (var i=0; i < funcs.length; i++){
+				  
+				  console.log(funcs[i]());
+				}
+
+		
+		
+		
+		
+		
+			var result = new Array(), i;
+			result[0] = function(){ return i; }; //没执行函数，函数内部不变，不能将函数内的i替换！
+			result[1] = function(){ return i; }; //没执行函数，函数内部不变，不能将函数内的i替换！
+			...
+			result[9] = function(){ return i; }; //没执行函数，函数内部不变，不能将函数内的i替换！
+			i = 10;
+			funcs = result;
+			result = null;
+			 
+			console.log(i); // funcs[0]()就是执行 return i 语句，就是返回10
+			console.log(i); // funcs[1]()就是执行 return i 语句，就是返回10
+			...
+			console.log(i); // funcs[9]()就是执行 return i 语句，就是返回10*/
+
+	</script>
+		
+		
+		
+		
+	</body>
+</html>

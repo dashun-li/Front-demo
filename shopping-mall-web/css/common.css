@@ -1,0 +1,28 @@
+/*字体相关*/
+.color66{
+	color: #FF6600;
+}
+.colore6{
+	color: #E6E6E6;
+}
+.colorf42{
+	color: #f4290d;
+}
+/*精灵图*/
+.sprites{
+	background: url(../img/footer_bg.png) no-repeat;
+}
+
+
+.texcenter{
+	text-align: center;
+}
+body{
+	overflow: hidden;
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+
+}

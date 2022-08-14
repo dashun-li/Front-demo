@@ -1,0 +1,180 @@
+#place{
+	position: absolute;
+	right: 26px;
+	bottom: -39px;
+}
+/*购物车表格*/
+#cartable{
+	height: 617px;
+	padding-top: 25px;
+}
+#cartable>span{
+	font-size: 22px;
+	margin-left: 4px;
+	color: #666666;
+	display: block;
+	margin-bottom: 6px;
+}
+#tablebox{
+	position: relative;
+}
+#tablebox th{
+	color:#808080 ;
+	font-size: 18px;
+	text-align: left;
+	background: #F2F2F2;
+	width: 1200px;
+	height: 58px;
+}
+#tablebox tr{
+	margin-top: 10px;
+	border-bottom: 2px solid #E6E6E6;
+}
+#tablebox th.first{
+	text-indent: 24px;
+}
+#tablebox th.first input{
+	height: 17px;
+	width: 17px;
+	margin-right: 6px;
+}
+
+#tablebox td{
+	font-size: 16px;
+	color: #4C4C4C;
+	text-align: left;
+	padding: 40px 0;
+}
+#tablebox td.first{
+	text-indent: 24px;
+	font-size: 18px;
+}
+#tablebox td.first input{
+	height: 16px;
+	height: 16px;
+}
+#tablebox td a.haspic{
+	border: 1px solid #C0C0C0;
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+}
+#tablebox td a{
+	color: #4C4C4C;
+}
+#tablebox td.total{
+	font-size: 18px;
+}
+#tablebox td.add input{
+	height: 24px;
+	width: 46px;
+	border: 1px solid #CCCCCC;
+	text-align: center;
+	margin: 0 2px;
+}
+#tablebox td.add span{
+	display:block;
+	height: 24px;
+	width: 24px;
+	border: 1px solid #CCCCCC;
+	text-align: center;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+	float: left;
+	cursor: pointer;
+}
+#tablebox tr.last td.first input{
+	width: 17px;
+	height: 17px;
+	margin-right: 6px;
+}
+#tablebox tr.last {
+	width: 1196px;
+	height: 58px;
+	border: 2px solid #E6E6E6;
+}
+#tablebox tr.last td{
+	padding: 0;
+}
+#tablebox tr.last td span.pro{
+	margin: 0 4px;
+	color: #FF6600;
+	font-weight: bolder;
+}
+#tablebox tr.last td.last {
+	font-size: 20px;
+	color: #4C4C4C;
+}
+#tablebox tr.last td.last span.price{
+	margin: 0 4px;
+	color: #FF6600;
+}
+#tablebox tr.last td.last {
+	font-size: 20px;
+	color: #4C4C4C;
+}
+#submits{
+	background: #FF6600;
+	color: white;
+	font-size: 26px;
+	width: 128px;
+	height: 60px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.del{
+	cursor: pointer;
+}
+/*购物车表格结束*/
+#productlist_reconmen{
+	padding-top: 25px;
+	height: 346px;
+}
+#productlist_reconmen .pro_nav{
+	color: white;
+	font-size: 24px;
+	height: 47px;
+	width: 124px;
+	background: #FF6600;
+	line-height: 47px;
+	text-align: center;
+}
+#productlist_reconmen .products{
+	border-top: 6px solid #FF6600;
+	width: 1195px;
+	height: 496px;
+	padding-left: 5px;
+}
+#productlist_reconmen .products li{
+	float: left;
+	width: 210px;
+	height: 248px;
+	margin-right: 36px;
+	position: relative;
+	padding-top: 8px;
+}
+#productlist_reconmen .products li.last{
+	margin-right: 0;
+}
+#productlist_reconmen .products .haspic{
+	width: 196px;
+	display: block;
+}
+
+#productlist_reconmen .products .hastitle{
+	color: #333;
+}
+#productlist_reconmen .products p{
+	padding-left:7px ;
+}
+#productlist_reconmen .products p.lastp{
+	font-size: 24px;
+}
+#productlist_reconmen .products p.lastp span{
+	color: #c0c0c0;
+	text-decoration: line-through;
+	margin-left: 23px;
+}
+/*图书折扣区结束*/

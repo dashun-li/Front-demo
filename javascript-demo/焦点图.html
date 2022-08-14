@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			#bannerFocus{
+				width: 250px;
+				height: 174px;
+				border: 4px solid green;
+				margin: 100px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			/*图片列表样式*/
+			#bannerBox{
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				width: 1000px;
+				position: absolute;
+				top:0px;
+				left:0px;
+			}
+			#bannerBox li{
+				float: left;
+			}
+			
+			/*数字样式*/
+			#numBox{
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				
+				position: absolute;
+				bottom:10px;
+				left: 80px;
+				
+			}
+			#numBox li{
+				float: left;
+				width: 20px;
+				height:20px;
+				border-radius: 10px;
+				background: greenyellow;
+				margin: 0px 4px;
+				text-align: center;
+				line-height: 20px;
+				
+			}
+			#numBox .current{
+				background: red;
+				color:white;
+			}
+		</style>
+	</head>
+	<body>
+		<!--外层盒子，就是正常网页中看到的图片区域-->
+		<div id="bannerFocus">
+			<!--图片列表-->
+			<ul id="bannerBox">
+				<li id="first"><img src="img/e1.png"/></li>
+				<li><img src="img/e2.png"/></li>
+				<li><img src="img/e3.png"/></li>
+			</ul>
+			<!--图片计数-->
+			<ul id="numBox">
+				<li class="current">1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</div>
+			
+		<!--左右图标-->
+			<input type="button" id="leftBtn" value="上一页" />
+			<input type="button" id="rightBtn" value="下一页" />
+	<script src="script/fn.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script type="text/javascript">
+		
+		/*
+		 1.抽取变化的值
+		 bannerbox轮播图ul
+		 first轮播图的第一张图id
+		 2.切换图片
+		 按钮。左右按钮id
+		 3.数字列表ul的id
+		 numBox
+		 
+		 */
+function animateFocus(bannerBox,first,numBox,leftBtn,rightBtn){//制作点击事件
+		//数字盒子，复制第一个li
+		//获取第一个li
+		var addli = getId(bannerBox).appendChild(getId(first).cloneNode(true));	
+	
+		//获取上一页按钮
+		var pre = getId(leftBtn);
+		var nextP = getId(rightBtn);
+		
+		var bannerBox = getId(bannerBox);
+		var liBannerArr = bannerBox.getElementsByTagName("li");
+		var liNumBox = getId(numBox).getElementsByTagName("li");
+		
+		
+			var num = 0;//设置变量保存索引值
+//上一页效果		
+		pre.onclick=function(){
+			//获取每张图片的left值
+			var leftx = getStyle(bannerBox,"left");
+			
+			//给判断值，分为2中情况，索引1-length减一，索引为0的时候
+			if(num == 0){
+				num = liBannerArr.length-2;
+			}else{
+				num--;
+			}//num最终变为索引的原因，就在判断这，
+			//因为num等于0的时候，给它再赋值为索引为倒数第二个的值，再变化的时候就执行else语句，再由此循环。图片每一次变化就是相对ul的初始位置改变，而索引*图片的宽就相当于每一张li的left坐标
+			leftx = -250*num ;
+			//赋leftx值给ul
+			bannerBox.style.left = leftx+"px";
+		
+			//绑定数字图标,此时num已经是索引值了
+			
+			//首先清绑定的样式
+			for (var i = 0; i < liNumBox.length; i++) {
+				liNumBox[i].className="";
+			}
+			//为当前滑动过去的图片绑定数字图标
+			liNumBox[num].className="current";
+			clearInterval(moveId);
+		}
+
+//下一页的制作效果
+		nextP.onclick=function(){
+			//获取每张图片的left值
+			var leftx = getStyle(bannerBox,"left");
+			
+			//给判断值，分为2中情况，索引0-length减一，索引为length-1的时候
+			if(num == liBannerArr.length-1){
+				num = 1;
+			}else{
+				num++;
+				log(num)
+			}
+			leftx = -250*num ;
+			//赋leftx值给ul
+			bannerBox.style.left = leftx+"px";
+		
+			//绑定数字图标,此时num已经是索引值了
+			
+			//首先清绑定的样式
+			for (var i = 0; i < liNumBox.length; i++) {
+				liNumBox[i].className="";
+			}
+			//为当前滑动过去的图片绑定数字图标,因为会跳转到第四个位置，但是第四个位置时，数字列表的超出索引，所以要给判断，将跳转到第四的索引变为0
+			if(num == liBannerArr.length-1){
+				num=0
+			}
+			liNumBox[num].className="current";
+			clearInterval(moveId);
+		}
+		
+
+//制作计时器（默认下一页）
+		var moveId = setInterval(function(){
+			
+			var leftx = getStyle(bannerBox,"left");
+			
+			//给判断值，分为2中情况，索引0-length减一，索引为length-1的时候
+			if(num == liBannerArr.length-1){
+				num = 1;
+			}else{
+				num++;
+				log(num)
+			}//num最终变为索引的原因，就在判断这，
+			//因为num等于0的时候，给它再赋值为索引为倒数第二个的值，再变化的时候就执行else语句，再由此循环。图片每一次变化就是相对ul的初始位置改变，而索引*图片的宽就相当于每一张li的left坐标
+			leftx = -250*num ;
+			//赋leftx值给ul
+			bannerBox.style.left = leftx+"px";
+		
+//绑定数字图标,此时num已经是索引值了
+			
+			//首先清绑定的样式
+			for (var i = 0; i < liNumBox.length; i++) {
+				liNumBox[i].className="";
+			}
+			//为当前滑动过去的图片绑定数字图标,因为会跳转到第四个位置，但是第四个位置时，数字列表的超出索引，所以要给判断，将跳转到第四的索引变为0
+			if(num == liBannerArr.length-1){
+				num=0
+			}
+			liNumBox[num].className="current";
+		},2000)
+		}
+		animateFocus("bannerBox","first","numBox","leftBtn","rightBtn");
+		
+		</script>
+	
+	</body>
+</html>

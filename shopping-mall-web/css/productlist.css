@@ -1,0 +1,349 @@
+#banner{
+	height: 520px;
+	position: relative;
+}
+#banner .ppt03 .controls li{
+	line-height: 20px;
+}
+/*新书畅销榜*/
+#boxright1{
+	width: 200px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+#boxright1>p{
+	color: white;
+	background: #93D46F;
+	font-size: 18px;
+	height: 30px;
+	line-height: 30px;
+	text-indent: 9px;
+}
+ #boxright1 .selllist li div.hastext{
+ 	width: 20px;
+ 	height: 20px;
+ 	text-align: center;
+ 	line-height: 20px;
+ 	color: white;
+ 	background: #B3B3B3;
+ 	float: right;
+ }
+ #boxright1 .selllist li.first {
+	display: block;
+}
+#boxright1 .selllist li 
+{
+   height:42px;
+   border-bottom: 1px solid #B3B3B3;
+   position: relative;
+   overflow: hidden;
+}
+#boxright1 .selllist li  a.hasimg img{
+	height:100px;
+	margin-top: 20px;
+}
+#boxright1 .selllist li a.hastxt{
+	width: 106px;
+	display: block;
+	position: absolute;
+	top: 27px;
+	right: 0;
+}
+/*图书折扣区*/
+#productlist_reconmen{
+	padding-top: 25px;
+	height: 569px;
+}
+#productlist_reconmen .pro_nav{
+	color: white;
+	font-size: 24px;
+	height: 47px;
+	width: 220px;
+	background: #FF6600;
+	line-height: 47px;
+	text-align: center;
+}
+#productlist_reconmen .products{
+	border-top: 6px solid #FF6600;
+	width: 1195px;
+	height: 496px;
+	padding-left: 5px;
+}
+#productlist_reconmen .products li{
+	float: left;
+	width: 210px;
+	height: 248px;
+	margin-right: 36px;
+	position: relative;
+	padding-top: 8px;
+}
+#productlist_reconmen .products li.last{
+	margin-right: 0;
+}
+#productlist_reconmen .products .haspic{
+	width: 196px;
+	display: block;
+}
+
+#productlist_reconmen .products .hastitle{
+	color: #333;
+}
+#productlist_reconmen .products p{
+	padding-left:7px ;
+}
+#productlist_reconmen .products p.lastp{
+	font-size: 24px;
+}
+#productlist_reconmen .products p.lastp span{
+	color: #c0c0c0;
+	text-decoration: line-through;
+	margin-left: 23px;
+}
+/*图书折扣区结束*/
+/*新书上架*/
+#product_book{
+	height: 541px;
+	padding-top: 40px;
+}
+#product_book .title{
+	font-size: 22px;
+}
+#product_book .title span{
+	font-size: 28px;
+	width: 42px;
+	height: 38px;
+	background: #FF6600;
+	color: white;
+	display:inline-block;
+	text-align: center;
+	margin-right: 4px;
+}
+#product_book #boxleft{
+	width: 904px;
+	border-top: 6px solid #FF6600;
+}
+#product_book #boxleft .probox{
+	height: 480px;
+	padding-top: 16px;
+	width: 900px;
+	border-right:2px solid #E6E6E6 ;
+	border-left:2px solid #E6E6E6 ;
+	border-bottom:2px solid #E6E6E6 ;
+}
+#product_book #boxleft .probox li{
+	height: 220px;
+	margin-right: 37px;
+	float: left;
+}
+#product_book #boxleft .probox li p{
+	text-indent: 11px;
+	line-height: 24px;
+}
+#product_book #boxleft .probox li.last{
+	margin-right: 0;
+}
+#product_book #boxleft .probox li.next{
+	margin-top: 24px;
+}
+#product_book #boxleft .probox .hastitle{
+	color: #333333;
+}
+#product_book #boxleft .probox .middle{
+	color: #808080;
+}
+#product_book #boxleft .probox .lastp span{
+	color: #b2b2b2;
+	text-decoration: line-through;
+}
+
+/*新书畅销榜*/
+#product_book #boxright{
+	width: 280px;
+	height: 500px;
+	border: 2px solid #E5E5E5;
+}
+#boxright>p{
+	text-align: center;
+	color: #808080;
+	font-size: 24px;
+	padding: 7px 0 14px;
+}
+.selllist li .style-1
+{
+	height: 42px;
+}
+.selllist li .style-1 span{
+	display: block;
+	height:40px;
+	width:22px;
+	float: left;
+	line-height: 40px;
+	text-align: center;
+}
+
+.selllist li .style-1 a{
+	width:254px;
+	height:38px;
+	line-height:38px;
+	display: block;
+	font-size: 16px;
+	color:#4c4c4c;	
+	border-bottom: solid 2px #E6E6E6;
+	float: right;
+	text-indent: 14px;
+}
+
+.selllist li.first .style-1{
+	display: none;
+}
+.selllist li.first .style-2{
+	display: block;
+}
+.selllist li .style-2
+{
+   height:152px;
+   display: none;
+}
+
+.selllist li .style-2 span{
+	display: block;
+	height:146px;
+	width:22px;
+	float: left;
+	text-align: center;
+}
+
+.selllist li .style-2 a.hasimg{
+	width:105px;
+	height:146px;
+	float: left;
+	border-bottom: solid 2px #E6E6E6;
+}
+
+.selllist li .style-2 a.hasimg img{
+	height:144px;
+	vertical-align: top;
+}
+.selllist li .style-2 a.hastxt{
+	width:143px;
+	height:146px;
+	float: right;
+	padding-left: 10px;
+	color:#404040;
+	line-height: 20px;
+	border-bottom: solid 2px #E6E6E6;
+}
+.selllist li.last a.hastxt,.selllist li.last a.hasimg,.selllist li.last .style-1 a{
+	border-bottom: 0;
+}
+/*新书上架结束*/
+/*独家推荐*/
+#only{
+	height: 570px;
+	padding-top: 57px;
+	border-bottom: 2px solid #E6E6E6;
+	position: relative;
+}
+.title{
+	position: relative;
+	border-bottom: 6px solid #FF6600;
+}
+ .title p{
+	color: #333;
+	font-size: 22px;
+
+}
+.title span{
+	font-size: 28px;
+	width: 42px;
+	height: 38px;
+	background: #FF6600;
+	color: white;
+	display:inline-block;
+	text-align: center;
+	margin-right: 4px;
+}
+.pro-com .title ul{
+	font-size: 18px;
+	color: #333333;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+}
+.pro-com .title ul>li{
+	width: 98px;
+	height: 34px;
+	float: left;
+	line-height: 34px;
+}
+.pro-com .title ul>li.current{
+	background: #FF6600;
+	color: white;
+}
+#only .pptlist{
+	display: none;
+}
+ .prolist li{
+	float: left;
+	height: 220px;
+    margin-right: 50px;
+    margin-top: 10px;
+    
+}
+ .prolist li.first{
+    margin-left: 30px;
+}
+.prolist li.last{
+    margin-right: 0;
+}
+ .prolist p{
+	text-indent: 11px;
+    line-height: 24px
+}
+ .prolist p.middle{
+	 color: #808080;
+}
+ .prolist p.lastp span {
+    color: #b2b2b2;
+    text-decoration: line-through;
+}
+
+/*独家推荐结束*/
+
+   /*猜你喜欢*/
+  #like{
+	height: 540px;
+	padding-top: 41px;
+	border-bottom: 2px solid #E6E6E6;
+	position: relative;
+}
+ .title img{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+ #like .cons>li {
+  	display: none;
+}
+ #like .cons>li.current {
+  	display: block;
+  	
+}
+
+
+ /*猜你喜欢结束*/
+
+/*推荐折扣商品*/
+#last{
+	height: 113px;
+	padding-top: 30px;
+}
+#last img{
+	width: 194px;
+	height: 113px;
+}
+
+
+/*推荐折扣商品结束*/

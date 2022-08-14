@@ -1,0 +1,88 @@
+			ul,li,p,span,body {
+				padding: 0;
+				margin: 0;
+			}
+			/*视图盒子*/
+			.pptbox {
+				width: 600px;
+				height: 300px;
+				background: gainsboro;
+				position: relative;
+				overflow: hidden;
+				display: none;
+			}
+			/*图片列表*/
+			
+			.pptbox ul.innerbox {
+				width: 4200px;
+				height: 300px;
+				position: absolute;
+				top: 0;
+				left: -600px;
+			}
+			
+			.pptbox .innerbox li {
+				float: left;
+				list-style: none;
+				width: 600px;
+				height: 300px;
+				/*以下为文字效果 可删除*/
+				font-size: 180px;
+				text-align: center;
+				line-height: 300px;
+				color: whitesmoke;
+			}
+			/*两边按钮*/
+			
+			.pptbox>span.btnleft {
+				width: 50px;
+				height: 100px;
+				background: black;
+				opacity: 0.5;
+				position: absolute;
+				top: 100px;
+				left: 0;
+				cursor: pointer;
+				display: none;
+			}
+			
+			.pptbox>span.btnright {
+				width: 50px;
+				height: 100px;
+				background: black;
+				opacity: 0.5;
+				position: absolute;
+				top: 100px;
+				right: 0;
+				cursor: pointer;
+				display: none;
+			}
+			/*底部控件*/
+			
+			.pptbox ul.controls {
+				width: 120px;
+				height: 20px;
+				position: absolute;
+				left: 140px;
+				bottom: 10px;
+				z-index: 10;
+				list-style: none;
+				display: none;
+			}
+			
+			.pptbox ul.controls li {
+				width: 20px;
+				height: 20px;
+				border-radius: 10px;
+				font-size: 12px;
+				margin-right: 10px;
+				background-color: green;
+				float: left;
+				text-align: center;
+				color: #fff;
+				cursor: pointer;
+			}
+			
+			.pptbox ul.controls li.current {
+				background-color: red;
+			}

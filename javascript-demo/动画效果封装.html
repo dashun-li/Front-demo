@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		#circle{
+			background: red;
+			border-radius: 50px;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		#squre{
+			
+			background: #8A2BE2;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 0;
+			top: 0px;
+			
+		}
+		#squre1{
+			
+			background: #E1E1E1;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 0;
+			top: 0px;
+			
+		}
+		</style>
+		<script src="script/fn.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="circle"></div>
+		<div id="squre"></div>
+		<div id="squre1"></div>
+<!--		<script type="text/javascript"
+			//每隔一段时间圆往左边移动
+			var moveId =setInterval(function(){
+				var circle = getId("circle");//获取元素
+				var circlex = parseInt(getStyle(circle,"left"));//获取圆的起始位置，getstyle,这里注意兼容性，直接用封好了的函数getstyle。得到的样式是字符串，要转换为数字类型才能进行加法运算，最后设置样式的时候记得把单位重新赋上
+				circlex+=50;
+				circle.style.left = circlex+"px";//注意px不要掉了,
+			},1000);
+		</script>-->
+<script type="text/javascript">
+/*animationFn()   动画效果封装     可以多次使用
+	 动画的三要素
+		时间：运动所需要的时间  ms
+		距离：起点到终点的差值   px
+		速度：运动的快慢   px/ms   V=s/t
+	 * */
+	//抽出参数
+	/*
+	每一次都会改变的值，即需要传入的参数
+	
+	1.id值.objId
+	
+	2.移动方向：left/right/top/bottom/with/height
+	 moveType
+	
+	3.终止位置
+	endPlace
+	 4.总时间
+	 times
+	 */
+	
+	function animationFn(objId,moveType,endPlace,times){
+		
+	//步骤1.找到目标对象
+	var circle=getId(objId);
+	
+	//步骤2.获取目标本身对应的属性值（left）
+	var circlex=getStyle(circle,moveType)
+	
+	//步骤3.设置默认的相关参数
+	
+	//3.1设置起点位置
+	var placeStart=parseInt(circlex);
+	//console.log(placeStart);
+	
+	//3.2设置终点位置
+	//var placeEnd=1000;
+	
+	//3.3获取运动的距离(总距离)
+	var distance=endPlace-placeStart;
+	
+	//3.4设置时间(单次运动时间)
+	var spaceTime=20;
+	
+	//3.5设置总时间
+	//var contTime=4000;
+	
+	//3.6设置速度
+	var speed=distance/times;
+	
+	
+	//步骤4：让目标对象周期运动
+
+
+		var moveId=setInterval(function (){
+			placeStart+=speed*spaceTime;
+			//距离大于总距离时 清除定时器
+			if(placeStart>=endPlace){
+				clearInterval(moveId);
+				circle.style.display="none";
+			//制作动画返回
+			var moveId2=setInterval(function (){
+					placeStart-=speed*spaceTime;
+					circle.style.display="block";
+					//距离大于总距离时 清除定时器
+					if(placeStart<=0){
+						clearInterval(moveId2);
+						circle.style.display="none";
+					}else{
+						//设置移动的距离
+						circle.style[moveType]=placeStart+"px";
+					}
+				},spaceTime)
+			}else{
+				//设置移动的距离
+				circle.style[moveType]=placeStart+"px";
+			}
+		},spaceTime)
+	
+		
+			
+	}
+	animationFn("squre","top",1000,4000);
+	animationFn("circle","left",1000,4000);
+	
+</script>
+	</body>
+</html>

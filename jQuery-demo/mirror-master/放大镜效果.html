@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>放大镜</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 608px;
+				margin: 100px;
+				position: relative;
+			}
+			#box .small{
+				width: 300px;
+				height: 200px;
+				border: 1px solid #ccc;
+				overflow: hidden;
+			}
+			#box .small img{
+				width: 300px;
+				height: 200px;
+			}
+			#box .big{
+				width: 300px;
+				height: 200px;
+				border: 1px solid #ccc;
+				position: absolute;
+				top: 0;
+				right: 0;
+				overflow: hidden;
+				visibility: hidden;
+			}
+			/*在之前就将大图的位置定好。图片中心与大盒子的中心重合（相当于绝对居中）*/
+			#box .big img{
+				width: 600px;
+				height:400px;
+				position: absolute;
+				top:-150px;
+				left:-100px ;
+			}
+				.zoombox{
+				width: 50px;
+				height: 50px;
+				background: rgba(0,0,0,0.2);
+				position: absolute;
+				left: 0;
+				top: 0;
+				cursor: move;
+				display: none;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<!--原图-->
+			<div class="small">
+				<img src="img/demo_small.jpg"/>
+				
+					
+				<!--拖拽的小盒子-->
+				<div class="zoombox">
+				
+				</div>
+			</div>
+			<!--放大图-->
+			<div class="big">
+				<img src="img/demo.jpg" class="bigimg"/>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			//获取需放大图片的盒子中心点坐标位置
+			var a_xx =$(".small").offset().left+150;
+			var a_yy =$(".small").offset().top+100;
+			
+			//获取大盒子图片相对位置
+			var oldb_x=$(".bigimg").position().left;
+			var oldb_y=$(".bigimg").position().top;
+			//设置拖拽盒子的坐标
+			
+			$(".small").mousemove(function(e){
+				//鼠标事件的坐标
+				var x = e.pageX
+				var y = e.pageY
+				//小图片盒子相对窗体的坐标
+				var a_x =$(".small").offset().left;
+				var a_y =$(".small").offset().top ;
+					
+				var dx =(x - a_x)-25;
+				var dy =(y - a_y)-25;
+				//完成吸附效果，
+				var minx=0;
+				var maxx=250;
+				var miny=0;				
+				var maxy=150;
+			
+				if(dx<(minx+20))
+				{
+					dx=0;
+				}
+				
+				if(dx>maxx-20)
+				{
+					dx=maxx;
+				}
+				
+				if(dy<miny+20)
+				{
+					dy=miny;
+				}
+				
+				if(dy>maxy-20)
+				{
+					dy=maxy;
+				}
+				
+				$(".zoombox").css({"left":dx,"top":dy}).show();
+				//小图相对于中心点的位置改变
+				var dxx = x-a_xx;
+				var dyy = y-a_yy;
+				
+				var currentb_x=oldb_x+(-2*dxx);
+				var currentb_y=oldb_y+(-2*dyy);
+				
+				$(".bigimg").css({"left":currentb_x,"top":currentb_y});
+				$(".big").css({"visibility":"visible"});
+			
+			})
+			$(".small").mouseleave(function(){
+				
+				$(".zoombox").hide()
+				$(".big").css({"visibility":"hidden"});
+			})
+			
+			
+		</script>
+		
+	</body>
+</html>

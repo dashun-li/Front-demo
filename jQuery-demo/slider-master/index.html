@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/side.css"/>
+	</head>
+	<body>		
+		<!--轮播结构开始-->
+		<div class="pptbox">
+			<ul class="innerbox">
+				<li style="background: #77ADA0;">1</li>
+				<li style="background: #1A4140;">2</li>
+				<li style="background: #D9A748;">3</li>
+				<li style="background: #8C2F27;">4</li>
+				<li style="background: #DA3E31;">5</li>
+			</ul>
+			<ul class="controls">
+				<li class="current">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+			<span class="btnleft"></span>
+			<span class="btnright"></span>
+		</div>
+		<!--轮播结构结束-->
+		<!--提示文字-->
+		<pre>
+				参数：
+				w:600,//轮播宽度
+				h:300,//轮播高度
+				isShowBtn:true,//是否显示左右按钮
+				isShowControls:true,//是否显示底部控制按钮
+				liW:30,//控件li的宽度，默认30
+				liH:30,//控件li的高度，默认30
+				cuttime:2000,//切换时间， 默认2000
+				blanktime:500,//动画持续时间
+				liRadius:5,//控件li圆角
+				liFont:12,//控件li内字体大小
+				liColor:"white",//控件内字体颜色
+				liBg:"gray",//控件背景颜色
+				liCurrent:"black",//当前li背景颜色
+				liBottom:30,//控件距离底部高度
+				btTop:90,//左右按钮距离顶部的高度
+		</pre>
+		
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jQuery.side.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">		
+			$(".pptbox").tyslider({
+				w:600,//轮播宽度
+				h:300,//轮播高度
+				isShowBtn:true,//是否显示左右按钮
+				isShowControls:true,//是否显示底部控制按钮
+				liW:30,//控件li的宽度，默认30
+				liH:30,//控件li的高度，默认30
+				cuttime:2000,//切换时间， 默认2000
+				blanktime:500,//动画持续时间
+				liRadius:5,//控件li圆角
+				liFont:12,//控件li内字体大小
+				liColor:"white",//控件内字体颜色
+				liBg:"gray",//控件背景颜色
+				liCurrent:"black",//当前li背景颜色
+				liBottom:30,//控件距离底部高度
+				btTop:90,//左右按钮距离顶部的高度
+			});
+		</script>
+	</body>
+</html>

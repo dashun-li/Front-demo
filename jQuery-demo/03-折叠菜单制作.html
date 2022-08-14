@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			dl{
+				width: 200px;
+				border-top:solid 1px #ccc;
+				border-left: solid 1px #ccc;
+				border-right: solid 1px #ccc;
+				margin: 100px;
+			}
+			dl dt{
+				width:100%;
+				height:30px;
+				border-bottom: solid 1px #ccc;
+				text-align: left;
+				line-height: 30px;
+				font-size: 16px;
+				font-weight: bold;
+				background-color: #eee;
+				cursor: pointer;
+				position: relative;
+				text-indent: 20px;
+			}
+			
+			dl dt img{
+				position: absolute;
+				right: 10px;
+				top:6px;
+			}
+			
+			dl dd{
+				width:100%;
+				border-bottom: solid 1px #ccc;
+				display: none;
+			}
+			
+			dl dd a{
+				display: block;
+				color: #000;
+				height: 28px;
+				text-decoration: none;
+				border-bottom: solid 1px #eee;
+				text-align: left;
+				text-indent: 20px;
+				line-height: 28px;
+				font-size: 14px;
+			}
+			
+			dl dd a.last{
+				border-bottom: 0;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<dl>
+			<dt>哲学 <img src="img/01.png"/></dt>
+			<dd>
+				<a href="#">体育3</a>
+				<a href="#">体育3</a>
+				<a href="#">体育3</a>
+				<a href="#" class="last">体育3</a>
+			</dd>
+			<dt>经济学 <img src="img/01.png"/></dt>
+			<dd>
+				<a href="#">经济学</a>
+				<a href="#">经济学</a>
+				<a href="#" class="last">经济学</a>
+			</dd>
+			<dt>法学<img src="img/01.png"/></dt>
+			<dd>
+				<a href="#">法学-1</a>
+				<a href="#">法学-2</a>
+				<a href="#" class="last">法学-3</a>
+			</dd>
+			<dt>教育学<img src="img/01.png"/></dt>
+			<dd>
+				<a href="#">教育学-1</a>
+				<a href="#">教育学-2</a>
+				<a href="#" class="last">教育学-3</a>
+			</dd>
+		</dl>
+		
+		
+		
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//制作点击事件
+			$("dt").click(function(){
+				if($(this).next().is(":hidden")){
+					$(this).children("img").prop("src","img/02.png")
+				}else{
+					$(this).children("img").prop("src","img/01.png")//找到当前元素下的子img。next表示下一个兄弟节点。child表示子节点。可以用find找
+				}
+				$(this).next().slideToggle();
+			});
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

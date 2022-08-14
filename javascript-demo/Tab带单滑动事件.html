@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		#tabbox{
+			width: 1000px;
+			margin: 100px auto;
+		}
+		#tabbox #boxtitle{
+			border-bottom: 1px solid #CCCCCC;
+			height: 40px;
+		}
+		#tabbox #boxtitle #menu{
+			list-style: none;
+			width: 336px;
+			margin: 0 auto;
+		}
+		#tabbox #boxtitle #menu li{
+			float: left;
+			width: 100px;
+			height: 40px;
+			border: 1px solid #CCCCCC;
+			text-align: center;
+			line-height: 40px;
+			background: #626262;
+			color: white;
+			margin-right: 10px;
+		}
+		#tabbox #boxtitle #menu li.current{
+			background: white;
+			color: red;
+			border-bottom: none;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+		}
+		#tabbox .content{
+			text-align: center;
+			margin-top: 20px;
+		}
+		#tabbox .hidden{
+			display: none;
+		}
+	</style>
+	<script src="script/fn.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+		<div id="tabbox">
+			<!--标题盒子-->
+			<div id="boxtitle">
+				<ul id="menu">
+					<li class="current">企业文化</li>
+					<li>团队介绍</li>
+					<li>大事记</li>
+				</ul>
+			</div>
+			<!--内容-->
+			<div class="content">
+				<img src="img/ca.png"/>
+			</div>
+			<div class="content hidden">
+				<img src="img/courmore.png"/>
+			</div>
+			<div class="content hidden">
+				<img src="img/e1.png"/>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			//获取li
+			var menus = getId("menu").getElementsByTagName("li");
+			log(menus);
+			//获取content
+			var cons = document.getElementsByClassName("content");
+			
+			log(cons)
+			//设置鼠标移入事件
+			//在每一个li 上设置点击事件。点击事件在for之内。因为在里面是每一个li都会执行这个鼠标移入事件
+			for (var i = 0; i < menus.length; i++) {
+				var current = menus[i];
+				current.tabIndex = i;//作用：是给content和li相同的索引值，tabIndex默认值是-1.你必须设置它的值
+				
+				current.onmouseover=function(){
+					
+					for (var i = 0; i < menus.length; i++) {
+						menus[i].className="";
+						cons[i].style.display="none";
+					}//重要！相当于是给一个鼠标移入事件的时候，将之前我们设置的样式要抹去，然后让显示的样式给当前移入的li
+					cons[this.tabIndex].style.display="block";//this.tabIndex是当前鼠标移入的li的索引
+					this.className = "current";
+				}
+			}
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				position: relative;
+			}
+			div img{
+				height: 448px;
+				position: absolute;
+				left:calc(50% - 336px) ;
+				top:50%;
+			}
+			div p{
+				
+				position: absolute;
+				left:10% ;
+				top:296px;
+				z-index: 4;
+				font-size: 70px;
+				text-shadow: -1px -1px white,1px 1px #333;   
+	            color:#D1D1D1;   
+	            font-weight:bold;   
+	            background: #CCC;    
+	         
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div>
+				<img src="img/393_1.jpg" alt="" />
+				<p id="msg">离毕业还有x天x小时x分钟x秒</p>
+		</div>
+		
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			aa();
+			
+			function aa(){
+			var endtime = new Date("2018/06/08 00:00:00");
+			var now = new Date();
+			var dx =endtime.getTime() - now.getTime();//得到毫秒
+			
+			
+			if(dx == 0){
+				clearInterval(timer);
+				$("#msg").text("恭喜你毕业啦！！！")
+			}else{
+				var d = Math.floor(dx/1000/60/60/24);
+				var h = Math.floor(dx/1000/60/60%24);
+				var m =	Math.floor(dx/1000/60%60);
+				var s =	Math.floor(dx/1000%60);
+				if(d<10){
+					d="0"+d;
+				}
+				if(h<10){
+					h="0"+h;
+				}
+				 if(m<10){
+					m="0"+m;
+				}
+				 if(s<10){
+					s="0"+s;
+				}
+				 var str = "离毕业还有"+d+"天"+h+"小时"+m+"分钟"+s+"秒"
+			
+			$("#msg").text(str);
+			}
+			
+			}
+			
+			
+		var timer =	setInterval(function(){
+				aa()
+			},1000)
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

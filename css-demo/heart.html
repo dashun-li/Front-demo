@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script src="script/fn.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		
+		var moveId = setInterval(function(){
+			//制作任意位置和大小的心形
+			var heart = document.createElement("img");
+			heart.src = "img/icon-red_03.png";
+			heart.style.position = "absolute";
+			heart.style.top = randomfn(0,1000)+"px";
+			heart.style.left = randomfn(0,1000)+"px";
+			heart.style.width = randomfn(20,150)+"px";
+			document.body.append(heart);
+			//增加点击事件，让鼠标点击心，心就消失
+				heart.onclick = function(){
+					this.style.display = "none";
+				}
+		},1000)
+
+		
+			
+			
+		</script>
+	</body>
+</html>

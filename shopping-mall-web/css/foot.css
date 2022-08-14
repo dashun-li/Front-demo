@@ -1,0 +1,80 @@
+/*foot*/
+
+#foot .wrapper{
+	height: 94px;
+	border-top:6px solid #FF6600 ;
+	margin-top: 30px;
+	background: #F2F2F2;
+}
+#foot .wrapper .content1{
+	width: 795px;
+	margin: 26px auto 18px;
+}
+#foot .wrapper a{
+	display: inline-block;
+	width: 138px;
+	height: 50px;
+	margin-right: 74px;
+}
+#foot .wrapper a.last{
+	margin-right: 0;
+}
+#foot .wrapper a.icon1{
+	background-position: 0 0;
+}
+#foot .wrapper a.icon2{
+	background-position: 0 -52px;
+}
+#foot .wrapper a.icon3{
+	background-position: 0 -104px;
+}
+#foot .wrapper a.icon4{
+	background-position: 0 -156px;
+}
+
+
+
+#foot .contentbox div{
+	display: inline-block;
+	text-align: center;
+	margin: 36px 20px 0 29px;
+	vertical-align: top;
+	line-height: 28px;
+}
+#foot .contentbox div.first{
+	margin-left: 277px;
+}
+#foot .contentbox div h3{
+	font-size: 18px;
+}
+#foot .contentbox div ul li a{
+	font-size: 16px;
+	color: #666666;
+}
+#foot .contentbox div.logo_box{
+	margin-top: 74px;
+}
+#foot .company-bref{
+	margin-top: 48px;
+	padding-left: 262px;
+}
+#foot .company-bref a{
+	color: #333333; 
+	display: inline-block;
+	height: 20px;
+	border-right: 1px solid #333333;
+	padding:0 18px;
+}
+#foot .company-bref a.last{
+	border-right: 0;
+}
+#foot div.last{
+	margin-top:24px;
+	text-align: center;
+	color: #333333;
+	padding-bottom: 107px;
+}
+/*foot*/
+.footpic {
+	margin-top: 40px;
+}

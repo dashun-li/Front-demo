@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+				background: #f97dbb;
+			}
+			#box{
+				width: 300px;
+				padding: 25px;
+				background: #fef2f8;
+				margin: 100px auto;
+			}
+			#box #userName,#box #password{
+				width: 300px;
+				height: 40px;
+				border: 1px solid #ddd;
+				text-indent: 50px;
+			}
+			#box p{
+				position: relative;
+			}
+			#box span{
+				display: block;
+				width: 42px;
+				height: 42px;
+				position: absolute;
+				top: 1px;
+				left: 0;
+				background: #DDDDDD;
+				text-align: center;
+				line-height: 48px;
+			}
+			#box p>img {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				display: none;
+			}
+			
+			#btn{
+				width: 300px;
+				height: 40px;
+				line-height: 40px;
+				background: #ff4400;
+				text-align: center;
+				color:white;
+				border: 1px solid #ff4400;
+				border-radius: 2px;
+				font-size: 16px;
+				letter-spacing: 10px;
+				font-weight: bold;
+			}
+			
+		</style>
+		<script src="script/fn.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="box">
+			<form action="#">
+				<p>
+					<span><img src="img/icon1.png"/></span>
+					<input type="text" id="userName" placeholder="会员名/邮箱/电话"/>
+					<img src="img/delIcon.png" id="delIcon1"/>
+				</p>
+				
+				<p>
+					<span><img src="img/icon2.png"/></span>
+					<input type="text" id="password" />
+					<img src="img/delIcon.png" id="delIcon2"/>
+				
+				</p>
+				
+				<p><input type="submit" value="登录" id="btn"/></p>	
+				
+	<script type="text/javascript">
+	//实现效果，1.获取焦点时清空placeholder，2.有输入时显示删除图标，3.点击删除图标清空输入内容，显示提示文字
+	
+	//1.获取焦点时清空placeholder
+	var userName = getId("userName");
+	userName.onfocus =function(){
+		userName.placeholder ="";
+		userName.style.outline="none";
+	}
+	userName.onblur =function(){
+		userName.placeholder="会员名/邮箱/电话";
+	}
+	//找到小图
+	var icon = getId("delIcon1");
+	//注册事件
+	userName.onkeyup =function(){
+		if(userName.value.length>0){
+			icon.style.display = "block";
+		}else{
+			icon.style.display="none";
+		}
+	}
+	//点击小图标清空
+	icon.onclick=function(){
+		userName.value="";
+		this.style.display="none"
+	}
+	
+	//密码框
+	var psd = getId("password")
+	var icon1 =getId("delIcon2")
+	psd.onclick=function(){
+		psd.style.outline="none"
+	}
+	psd.onkeyup =function(){
+		if(psd.value.length>0){
+			icon1.style.display="block";
+		}else{
+			icon1.style.display="none";
+		}
+	}
+	icon1.onclick=function(){
+		psd.value="";
+		this.style.display="none"
+	}
+	
+	
+	
+	</script>			
+				
+				
+				
+				
+				
+			</form>
+			
+		</div>
+		
+		
+		
+		
+		
+		<script type="text/javascript">
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,104 @@
+#head{
+	background:#0F0F0F ;
+	height: 21px;
+}
+#head .content{
+	line-height: 21px;
+	position: relative;
+}
+#head .content .indexweb{
+	position: absolute;
+	left: 206px;
+	top: 0;
+}
+/*headnav*/
+#headnav{
+	height: 84px;
+	position: relative;
+}
+#headnav>a{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+
+#headnav .formpa{
+	position: relative;
+}
+#headnav .searchlist .searchform{
+	position: absolute;
+	right: 245px;
+	top: 4px;
+}
+#headnav .searchlist .searchform .searchbox{
+	width: 436px;
+	height: 32px;
+	border: 2px solid #FF6600;
+	color: #E1E1E1;
+	text-indent: 6px;
+}
+#headnav .searchlist .searchform .secbtn{
+	width: 50px;
+	height: 35px;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	cursor: pointer;
+	background: url(../img/bgicon.png) no-repeat;
+}
+#headnav .searchlist .searchform img{
+	position: absolute;
+	right:58px;
+	top: 7px;
+	display: none;
+}
+
+#headnav .searchlist .listcar{
+	position: relative;
+}
+#headnav .searchlist .listcar a {
+	display: inline-block;
+	height: 36px;
+	line-height: 36px;
+	margin-top: 4px;
+}
+#headnav .searchlist .listcar .car{
+	background:#FF6600;
+	color: white;
+	width: 100px;
+	text-indent: 36px;
+	position: absolute;
+	right: 100px;
+	top: 0;
+	overflow: hidden;
+}
+#headnav .searchlist .listcar .car img{
+	position: absolute;
+	left: 0;
+	top: -42px;
+}
+#headnav .searchlist .listcar .list{
+	border: 1px solid #cccccc;
+	height: 34px;
+	width: 98px;
+	background: #EBEBEB;
+	text-align: center;
+	font-size: 16px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+
+#headnav #navlist{
+	position: absolute;
+	left: 221px;
+	bottom: 4px;
+}
+#headnav #navlist li{
+	float: left;
+	margin: 0 16px;
+	font-size: 16px;
+	font-weight: bolder;
+}

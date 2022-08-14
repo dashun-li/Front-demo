@@ -1,0 +1,21 @@
+#personal{height: 1rem;flex-grow: 1;}
+#personal .main-box{height: 1rem;flex-grow: 1;overflow: scroll;}
+#personal .personal-head{width: 100%;padding-bottom: 0.2rem;background: #eee;overflow: hidden;}
+#personal .personal-head .icon-right-nav {float:right;margin-top:2rem;color:#ccc;margin-right: 1rem;}
+#personal .personal-head .personal-head-img{width:20%;display:block;border-radius: 50%;float: left;margin:0.3rem 0.3rem}
+#personal .personal-head .personal-head-msg{display: inline-block;margin-left:0.5rem;width:50%;float: left}
+#personal .personal-head .personal-head-msg .personal-head-text{font-weight: bold;font-size:1.2rem;display: inline-block;margin-top:0.5rem;}
+#personal .personal-head .personal-head-msg p{width: 100%;}
+#personal .personal-head .personal-head-msg p span{color: #109EEC;}
+#personal .personal-head .personal-head-msg p i{font-style: normal;display: inline-block;background: #ccc;
+  margin-left:0.8rem;color:#fff;border-radius: 4px;padding:0.1rem 0.1rem;}
+#personal .personal-head .personal-head-msg p img{width:10%}
+
+
+#personal .personal-nav {background: #fff;text-align: center;}
+#personal .personal-nav .col{border-right: 1px solid #eee;}
+#personal .personal-nav img{width:40%;float: left;display: block}
+#personal .personal-nav a {font-size:0.9rem;display:block;height: 3rem;}
+#personal .personal-nav a span.text{width:60%;text-align: center;float: left;display: block;}
+#personal .personal-list {margin-top:0.5rem;margin-bottom:0;}
+

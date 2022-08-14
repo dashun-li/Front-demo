@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>saizi</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            background: black;
+        }
+
+        div {
+            display: flex;
+        }
+
+        div>ul {
+            display: flex;
+            margin: 50px 30px;
+            padding: 5px;
+            height: 80px;
+            width: 80px;
+            background: #f8f8f8;
+            border-radius: 10px;
+            border: 1px solid rgb(153, 153, 153);
+            box-shadow: 2px 2px rgb(153, 153, 153);
+            flex-wrap: wrap;
+        }
+
+        ul li {
+            width: 24px;
+            height: 24px;
+            background: black;
+            border-radius: 50%;
+            box-shadow: 0 -2px rgb(153, 153, 153) inset;
+        }
+
+        .one {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .two,
+        .three,
+        .four
+        {
+            justify-content: space-between;
+        }
+
+        .two>li:nth-child(2) {
+            align-self: flex-end;
+        }
+
+        .three>li:nth-child(2) {
+            align-self: center;
+        }
+
+        .three>li:nth-child(3) {
+            align-self: flex-end;
+        }
+
+        .four>ul {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .column {
+            display: flex;
+            width: 80px;  
+        }
+
+        .four .column:nth-child(2)>li {
+            margin-top: 30px;
+        }
+
+        .five .column,
+        .six .column {
+            justify-content: space-between;
+        }
+
+        .five .column:nth-child(2) {
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul class="one">
+            <li></li>
+        </ul>
+        <ul class="two">
+            <li></li>
+            <li></li>
+        </ul>
+        <ul class="three">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul class="four">
+            <ul class="column">
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="column">
+                <li></li>
+                <li></li>
+            </ul>
+        </ul>
+        <ul class="five">
+            <ul class="column">
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="column">
+                <li></li>
+            </ul>
+            <ul class="column">
+                <li></li>
+                <li></li>
+            </ul>
+        </ul>
+        <ul class="six">
+            <ul class="column">
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="column">
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="column">
+                <li></li>
+                <li></li>
+            </ul>
+        </ul>
+
+
+
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>

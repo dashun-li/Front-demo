@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+			}
+			#shearbox{
+				width: 226px;
+				height: 326px;
+				position: fixed;
+				right: -226px;
+				top: 100px;
+			}
+			#shear{
+				width: 24px;
+				height: 66px;
+				color: white;
+				background:#90C6F5;
+				font-size: 16px;
+				text-align: center;
+				padding-top: 22px;
+				position: absolute;
+				left: -24px;
+				top: 69px;
+				font-weight: bold;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+			}
+			#content ul{
+				list-style: none;
+			}
+			#content ul .pagesheet{
+				background: #F6F6F6;
+				height: 30px;
+				line-height: 30px;
+			}
+			#content ul .first{
+				text-indent: 10px;
+				font-weight: bold;
+				color:#626262 ;
+			}
+			#content ul .last{
+				text-align: right;
+				margin-top: 2px;
+				font-size: 12px;
+			}
+			#content ul .main-content{
+				margin-left: 14px;
+			}
+			#content ul .main-content a{
+				display: inline-block;
+				width: 100px;
+				height: 30px;
+				margin-top: 3px;
+				line-height: 30px;
+				font-size: 12px;
+			}
+			#content ul li a img{
+				margin-right: 8px;
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="shearbox">
+			<div id="shear">
+				分<br />享
+			</div>
+				<div id="content">
+					<ul>
+						<li class="pagesheet first">分享到</li>
+						<li class="main-content">
+							<a href="#"><img src="img/1.00_03.png"/>一键分享</a>
+							<a href="#"><img src="img/1.00_05.png"/>QQ空间</a>
+							<a href="#"><img src="img/1.00_09.png"/>新浪微博</a>
+							<a href="#"><img src="img/1.00_10.png"/>百度云收藏</a>
+							<a href="#"><img src="img/1.00_13.png"/>微信</a>
+							<a href="#"><img src="img/1.00_14.png"/>人人网</a>
+							<a href="#"><img src="img/1.00_17.png"/>腾讯微博</a>
+							<a href="#"><img src="img/1.00_18.png"/>百度相册</a>
+							<a href="#"><img src="img/1.00_21.png"/>开心网</a>
+							<a href="#"><img src="img/1.00_22.png"/>腾讯朋友</a>
+							<a href="#"><img src="img/1.00_25.png"/>百度贴吧</a>
+							<a href="#"><img src="img/1.00_26.png"/>豆瓣网</a>
+							<a href="#"><img src="img/1.00_29.png"/>百度新网页</a>
+							<a href="#"><img src="img/1.00_30.png"/>QQ好友</a>
+							<a href="#"><img src="img/1.00_33.png"/>和讯微博</a>
+							<a href="#"><img src="img/1.00_35.png"/>百度中心</a>
+						</li>	
+						<li class="pagesheet last">
+							<a href="#"><img src="img/1.00_40.png"/>更多...</a>
+						</li>
+					</ul>
+				
+			</div>
+		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("#shearbox").hover(function(){
+				$(this).stop(true,false).animate({"right":0},500)
+			},function(){
+				$(this).stop(true,false).animate({"right":-226},500)//stop停止动画，两个参数的理解
+			})
+			
+			
+			
+		</script>
+	</body>
+</html>

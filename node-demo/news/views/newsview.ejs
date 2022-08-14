@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				font-size: 14px;
+			}
+			#wrapper{
+				width: 1000px;
+				line-height: 24px;
+				margin: 0 auto;
+			}
+			#wrapper h1{
+				line-height: 35px;
+				text-align: center;
+				border-bottom: dashed 1px #eee;
+				padding-bottom: 10px;
+			}
+			#wrapper p{
+				line-height: 35px;
+				text-align: center;
+			}
+			 textarea {
+            width: 100%;
+            height: 200px;
+            resize: none;
+            outline: none;
+        }
+
+        input {
+            background: #f60;
+            color: aliceblue;
+            outline: none;
+            border: none;
+            width: 50px;
+            height: 30px;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        table td {
+            border-bottom: 1px dashed #cccccc;
+        }
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<h1><%=newsdata.title%></h1>
+			<p>作者：<%=newsdata.author%> 来源：<%=newsdata.source%> 发布时间：2016-09-20</p>
+			<div>
+				<%=newsdata.content%>
+			</div>	
+		</div>
+		<table>
+			<%for(var i=0;i<msgdata.length;i++) {%>
+				<tr>
+					<td>
+						<%=msgdata[i].msg%>
+					</td>
+				</tr>
+				<%}%>
+		</table>
+		<form action="/news/message_save.html" method="post">
+			<textarea name="msg" id="message"></textarea>
+			<input type="submit" value="留言">
+		</form>
+	</body>
+</html>
